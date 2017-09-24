@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.changeButton?.addTarget(self, action: #selector(changeButtonClick(button:)), for: .touchUpInside)
     }
     
-    func changeButtonClick(button:UIButton) {
+    @objc func changeButtonClick(button:UIButton) {
         
         self.fontName = self.fontNames[(self.fontNames.index(of: self.fontName)! + 1) % 4]
         print(self.fontName)

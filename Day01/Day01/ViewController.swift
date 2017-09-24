@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
     }
     
-    func updateCountLabel() {
+    @objc func updateCountLabel() {
         count = count + 0.1
         countLable.text = String(format:"%0.1f",count)
     }
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func resetButtonClick(_ sender: UIButton) {
         timer.invalidate()
         count = 0.0
-        updateCountLabel()
+        countLable.text = String(format:"%0.1f",count)
         stopButton.isEnabled = false
         beginButton.isEnabled = true
     }

@@ -7,13 +7,47 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CameraController: UIViewController {
+    
+    var preViewlayer : AVCaptureVideoPreviewLayer?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        preViewlayer?.frame = view.bounds
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.isStatusBarHidden = true;
-        // Do any additional setup after loading the view.
+        
+        //相机
+        
+        let session = AVCaptureSession()
+        session.sessionPreset = .high
+        
+        let availableCameraDevices = AVCaptureDevice.default(for: AVMediaType.video)
+        var error:NSError?
+        var cameraInput:AVCaptureDeviceInput!
+        
+        do {
+            cameraInput = try AVCaptureDeviceInput(device: availableCameraDevices!)
+        } catch let error1 as NSError {
+            error = error1
+            cameraInput = nil
+        }
+        
+        if error == nil && session.canAddInput(cameraInput) {
+            session.addInput(cameraInput)
+            
+            preViewlayer = AVCaptureVideoPreviewLayer(session:session)
+            preViewlayer?.videoGravity = .resizeAspect
+            preViewlayer?.connection?.videoOrientation = .portrait
+            self.view.layer.addSublayer(preViewlayer!)
+            session.startRunning()
+        }
     }
 
     override func didReceiveMemoryWarning() {

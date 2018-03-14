@@ -30,12 +30,7 @@ class CollectionViewCell: UICollectionViewCell {
         createUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     private func createUI() {
-        
         logoView = UIImageView.init(frame: self.bounds)
         logoView.contentMode = .scaleAspectFill
         contentView.addSubview(logoView)
@@ -51,12 +46,12 @@ class CollectionViewCell: UICollectionViewCell {
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor.black
         contentView.addSubview(titleLabel)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
         
         contentView.layer.cornerRadius = 10.0;
         contentView.clipsToBounds = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

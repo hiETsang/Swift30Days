@@ -37,12 +37,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20)
         layout.scrollDirection = .horizontal
         
-        collectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenWidth), collectionViewLayout: layout)
+        collectionView = UICollectionView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 500), collectionViewLayout: layout)
         collectionView.center = view.center
         view.addSubview(collectionView)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.isPagingEnabled = true
         collectionView.backgroundColor = UIColor.clear
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     }

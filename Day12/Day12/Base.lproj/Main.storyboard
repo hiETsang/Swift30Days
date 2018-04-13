@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Day12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWn-my-bul">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-Il-6mD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3S-D9-4UY">
+                                                <rect key="frame" x="27" y="527" width="320" height="50"/>
+                                                <color key="backgroundColor" red="0.99987119440000005" green="0.99998223779999995" blue="0.99984109399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TQi-b8-5ge"/>
+                                                    <constraint firstAttribute="height" constant="50" id="n08-pC-fou"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                <state key="normal" title="Sign up">
+                                                    <color key="titleColor" red="0.090196078430000007" green="0.49019607840000001" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0a-gF-LZO">
+                                                <rect key="frame" x="27" y="597" width="320" height="50"/>
+                                                <color key="backgroundColor" red="0.090815089639999999" green="0.58950072529999997" blue="0.0092235039920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZLn-9X-yAX"/>
+                                                    <constraint firstAttribute="height" constant="50" id="eBv-EN-nNC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" red="0.99987119440000005" green="0.99998223779999995" blue="0.99984109399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SJS-OD-YWg"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-secondary-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-KH-LIN">
+                                                <rect key="frame" x="78" y="86" width="218" height="66"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.090511985119999999" green="0.68889498709999997" blue="0.01208600588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="XIx-KH-LIN" firstAttribute="top" secondItem="VEw-Il-6mD" secondAttribute="top" constant="86" id="3zc-Nb-TYi"/>
+                                            <constraint firstItem="XIx-KH-LIN" firstAttribute="centerX" secondItem="VEw-Il-6mD" secondAttribute="centerX" id="5en-Ct-DbX"/>
+                                            <constraint firstAttribute="trailing" secondItem="s0a-gF-LZO" secondAttribute="trailing" constant="28" id="HAg-L8-wdM"/>
+                                            <constraint firstAttribute="bottom" secondItem="s0a-gF-LZO" secondAttribute="bottom" constant="20" id="Qd3-bU-3N7"/>
+                                            <constraint firstItem="q3S-D9-4UY" firstAttribute="leading" secondItem="VEw-Il-6mD" secondAttribute="leading" constant="27" id="g2C-3h-l3W"/>
+                                            <constraint firstAttribute="trailing" secondItem="q3S-D9-4UY" secondAttribute="trailing" constant="28" id="qSl-IG-nKO"/>
+                                            <constraint firstItem="s0a-gF-LZO" firstAttribute="leading" secondItem="VEw-Il-6mD" secondAttribute="leading" constant="27" id="vDH-mj-x8c"/>
+                                            <constraint firstItem="s0a-gF-LZO" firstAttribute="top" secondItem="q3S-D9-4UY" secondAttribute="bottom" constant="20" id="var-Xm-N1c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VEw-Il-6mD" firstAttribute="centerX" secondItem="sWn-my-bul" secondAttribute="centerX" id="0Vp-Lb-yUn"/>
+                                    <constraint firstItem="VEw-Il-6mD" firstAttribute="centerY" secondItem="sWn-my-bul" secondAttribute="centerY" id="1sv-9c-vcm"/>
+                                    <constraint firstItem="VEw-Il-6mD" firstAttribute="top" secondItem="sWn-my-bul" secondAttribute="top" id="Nxm-IO-cNH"/>
+                                    <constraint firstAttribute="trailing" secondItem="VEw-Il-6mD" secondAttribute="trailing" id="X3Q-Us-Wp8"/>
+                                    <constraint firstItem="VEw-Il-6mD" firstAttribute="leading" secondItem="sWn-my-bul" secondAttribute="leading" id="kfW-69-d2p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sWn-my-bul" secondAttribute="trailing" id="2Eg-ap-5hd"/>
+                            <constraint firstItem="sWn-my-bul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fpu-VT-BQz"/>
+                            <constraint firstItem="sWn-my-bul" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jfe-JN-MAK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sWn-my-bul" secondAttribute="bottom" id="UCr-pQ-Uof"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login-secondary-logo" width="218" height="66"/>
+    </resources>
+</document>

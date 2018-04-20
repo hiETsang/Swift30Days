@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate{
 
     var window: UIWindow?
     var mask : CALayer?
@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UIViewController()
+        self.window?.rootViewController = MyNavController(rootViewController: ViewController())
+        self.window!.makeKeyAndVisible()
+        self.window!.backgroundColor = UIColor(red:0.117, green:0.631, blue:0.949, alpha:1)
         
         let imageView = UIImageView(frame: (self.window?.frame)!)
         imageView.image = UIImage(named: "screen")
@@ -36,18 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         animateMask()
         
-        self.window!.backgroundColor = UIColor(red:0.117, green:0.631, blue:0.949, alpha:1)
-        self.window!.makeKeyAndVisible()
-        UIApplication.shared.isStatusBarHidden = true
+        print("didFinishLaunchingWithOptions")
         return true
     }
     
     func animateMask() {
         
         let keyFrameAnimation = CAKeyframeAnimation(keyPath: "bounds")
-        keyFrameAnimation.delegate = self as? CAAnimationDelegate
+        keyFrameAnimation.delegate = self
         keyFrameAnimation.duration = 0.6
-        keyFrameAnimation.beginTime = CACurrentMediaTime() + 0.5
+        keyFrameAnimation.beginTime = 0.0
         keyFrameAnimation.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut), CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)]
         let initalBounds = NSValue(cgRect: mask!.bounds)
         let secondBounds = NSValue(cgRect: CGRect(x: 0, y: 0, width: 80, height: 64.8))
@@ -55,11 +55,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         keyFrameAnimation.values = [initalBounds, secondBounds, finalBounds]
         keyFrameAnimation.keyTimes = [0, 0.3, 1]
         self.mask!.add(keyFrameAnimation, forKey: "bounds")
-        
-        self.perform(#selector(animationDidStop), with: self, afterDelay: 1.1)
+        print("animateMask")
     }
     
-    @objc func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+    func animationDidStart(_ anim: CAAnimation) {
+        print("animationDidStart")
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        print("animationDidStop")
         self.imageView!.layer.mask = nil
     }
 

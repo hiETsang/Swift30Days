@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		719DD1A6208E07D40029C1D6 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD1A5208E07D40029C1D6 /* MenuTransitionManager.swift */; };
 		719E456F208C367D00B28C0E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E456D208C367D00B28C0E /* MainTableViewCell.swift */; };
 		719E4570208C367D00B28C0E /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719E456E208C367D00B28C0E /* MainTableViewCell.xib */; };
 		719E4572208C5BF500B28C0E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E4571208C5BF500B28C0E /* MenuViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		719DD1A5208E07D40029C1D6 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		719E456D208C367D00B28C0E /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		719E456E208C367D00B28C0E /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		719E4571208C5BF500B28C0E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -66,13 +68,14 @@
 			children = (
 				71A6CD0920864872007FC133 /* AppDelegate.swift */,
 				71A6CD0B20864872007FC133 /* ViewController.swift */,
+				719E4571208C5BF500B28C0E /* MenuViewController.swift */,
+				719DD1A5208E07D40029C1D6 /* MenuTransitionManager.swift */,
 				71A6CD0D20864872007FC133 /* Main.storyboard */,
 				71A6CD1020864874007FC133 /* Assets.xcassets */,
 				71A6CD1220864874007FC133 /* LaunchScreen.storyboard */,
 				71A6CD1520864874007FC133 /* Info.plist */,
 				719E456D208C367D00B28C0E /* MainTableViewCell.swift */,
 				719E456E208C367D00B28C0E /* MainTableViewCell.xib */,
-				719E4571208C5BF500B28C0E /* MenuViewController.swift */,
 				719E4573208C5CAE00B28C0E /* MenuTableViewCell.swift */,
 				719E4574208C5CAE00B28C0E /* MenuTableViewCell.xib */,
 			);
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71A6CD0C20864872007FC133 /* ViewController.swift in Sources */,
+				719DD1A6208E07D40029C1D6 /* MenuTransitionManager.swift in Sources */,
 				719E456F208C367D00B28C0E /* MainTableViewCell.swift in Sources */,
 				71A6CD0A20864872007FC133 /* AppDelegate.swift in Sources */,
 				719E4572208C5BF500B28C0E /* MenuViewController.swift in Sources */,

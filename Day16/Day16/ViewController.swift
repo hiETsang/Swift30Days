@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,MenuViewControllerDelegate {
     
+    let menuTransitionManager = MenuTransitionManager()
     var tableView : UITableView?
 
     override func viewDidLoad() {
@@ -27,10 +28,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView?.separatorStyle = .none
         self.tableView?.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.tableView?.backgroundColor = .clear
+        
+        
     }
     
     @objc func leftButtonClick()  {
-        self.present(MenuViewController(), animated: true, completion: nil)
+        let viewController = MenuViewController()
+        viewController.currentItem = self.title!
+        viewController.delegate = self
+        viewController.vc = self
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func dismiss() {
+        dismiss(animated: true, completion: nil)
     }
     
     

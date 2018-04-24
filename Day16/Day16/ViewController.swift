@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,MenuViewControllerDelegate {
-    
-    let menuTransitionManager = MenuTransitionManager()
     var tableView : UITableView?
 
     override func viewDidLoad() {

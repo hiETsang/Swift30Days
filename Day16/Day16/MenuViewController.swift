@@ -14,19 +14,20 @@ import UIKit
     
 }
 
-class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIViewControllerTransitioningDelegate {
+class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var tableView : UITableView?
     var menuItems = ["Everyday Moments", "Popular", "Editors", "Upcoming", "Fresh", "Stock-photos", "Trending"]
     var currentItem = "Everyday Moments"
     var vc : ViewController?
+    let menuManager = MenuTransitionManager()
     
     var delegate:MenuViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.transitioningDelegate = self
+        self.transitioningDelegate = menuManager
         self.modalPresentationStyle = .custom
         self.view.backgroundColor = UIColor(red:0.062, green:0.062, blue:0.07, alpha:1)
         
@@ -72,20 +73,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
         vc?.title = cell.menuTitleLabel.text!
         self.delegate?.dismiss()
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let manager = MenuTransitionManager()
-        manager.type = .Present
-        //跳转
-        return manager
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let manager = MenuTransitionManager()
-        manager.type = .Dissmiss
-        //返回
-        return manager
     }
 
     /*

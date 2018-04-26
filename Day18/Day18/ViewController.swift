@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let mybutton = UIButton(type: .custom)
+        let rightButton = UIButton(type: .custom)
+        view.addSubview(mybutton)
+        view.addSubview(rightButton)
+        rightButton.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
     }
 
     override func didReceiveMemoryWarning() {

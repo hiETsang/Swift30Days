@@ -27,8 +27,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView?.backgroundColor = UIColor.white
         
-        tableView?.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+        tableView?.mj_header = XDIYHeader.init(refreshingBlock: {
             //动画
+            Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { _  in
+                self.tableView?.mj_header.endRefreshing()
+            })
         })
     }
     

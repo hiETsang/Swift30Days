@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7160D071209EEFE100B99BC2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7160D06F209EEFE100B99BC2 /* CollectionViewCell.swift */; };
+		7160D072209EEFE100B99BC2 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7160D070209EEFE100B99BC2 /* CollectionViewCell.xib */; };
 		71FACF41209DEEDA003C2B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACF40209DEEDA003C2B17 /* AppDelegate.swift */; };
 		71FACF43209DEEDA003C2B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FACF42209DEEDA003C2B17 /* ViewController.swift */; };
 		71FACF46209DEEDA003C2B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FACF44209DEEDA003C2B17 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7160D06F209EEFE100B99BC2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		7160D070209EEFE100B99BC2 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		71FACF3D209DEEDA003C2B17 /* Day20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FACF40209DEEDA003C2B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71FACF42209DEEDA003C2B17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				71FACF47209DEEDC003C2B17 /* Assets.xcassets */,
 				71FACF49209DEEDC003C2B17 /* LaunchScreen.storyboard */,
 				71FACF4C209DEEDC003C2B17 /* Info.plist */,
+				7160D06F209EEFE100B99BC2 /* CollectionViewCell.swift */,
+				7160D070209EEFE100B99BC2 /* CollectionViewCell.xib */,
 			);
 			path = Day20;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				71FACF4B209DEEDC003C2B17 /* LaunchScreen.storyboard in Resources */,
 				71FACF48209DEEDC003C2B17 /* Assets.xcassets in Resources */,
+				7160D072209EEFE100B99BC2 /* CollectionViewCell.xib in Resources */,
 				71FACF46209DEEDA003C2B17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			files = (
 				71FACF43209DEEDA003C2B17 /* ViewController.swift in Sources */,
 				71FACF41209DEEDA003C2B17 /* AppDelegate.swift in Sources */,
+				7160D071209EEFE100B99BC2 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7125384620ADC6CC00A54554 /* BackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125384520ADC6CC00A54554 /* BackTableViewController.swift */; };
+		7125384820ADCBF600A54554 /* FriendReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125384720ADCBF600A54554 /* FriendReadViewController.swift */; };
+		7125384A20ADCBFE00A54554 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125384920ADCBFE00A54554 /* ArticleViewController.swift */; };
+		7125384C20ADCC0800A54554 /* ReadLaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125384B20ADCC0800A54554 /* ReadLaterViewController.swift */; };
+		7125384E20ADD01000A54554 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125384D20ADD01000A54554 /* BaseViewController.swift */; };
 		7177FBD020AD833000E91A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7177FBCF20AD833000E91A5E /* AppDelegate.swift */; };
-		7177FBD220AD833100E91A5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7177FBD120AD833100E91A5E /* ViewController.swift */; };
 		7177FBD520AD833100E91A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7177FBD320AD833100E91A5E /* Main.storyboard */; };
 		7177FBD720AD833200E91A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7177FBD620AD833200E91A5E /* Assets.xcassets */; };
 		7177FBDA20AD833200E91A5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7177FBD820AD833200E91A5E /* LaunchScreen.storyboard */; };
@@ -16,9 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7125384520ADC6CC00A54554 /* BackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTableViewController.swift; sourceTree = "<group>"; };
+		7125384720ADCBF600A54554 /* FriendReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendReadViewController.swift; sourceTree = "<group>"; };
+		7125384920ADCBFE00A54554 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		7125384B20ADCC0800A54554 /* ReadLaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadLaterViewController.swift; sourceTree = "<group>"; };
+		7125384D20ADD01000A54554 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7177FBCC20AD833000E91A5E /* Day23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7177FBCF20AD833000E91A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7177FBD120AD833100E91A5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7177FBD420AD833100E91A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7177FBD620AD833200E91A5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7177FBD920AD833200E91A5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,12 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				7177FBCF20AD833000E91A5E /* AppDelegate.swift */,
-				7177FBD120AD833100E91A5E /* ViewController.swift */,
 				7177FBD320AD833100E91A5E /* Main.storyboard */,
 				7177FBD620AD833200E91A5E /* Assets.xcassets */,
 				7177FBD820AD833200E91A5E /* LaunchScreen.storyboard */,
 				7177FBDB20AD833200E91A5E /* Info.plist */,
 				7177FBE120AD843600E91A5E /* BaseNavigationController.swift */,
+				7125384520ADC6CC00A54554 /* BackTableViewController.swift */,
+				7125384720ADCBF600A54554 /* FriendReadViewController.swift */,
+				7125384920ADCBFE00A54554 /* ArticleViewController.swift */,
+				7125384B20ADCC0800A54554 /* ReadLaterViewController.swift */,
+				7125384D20ADD01000A54554 /* BaseViewController.swift */,
 			);
 			path = Day23;
 			sourceTree = "<group>";
@@ -138,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7177FBD220AD833100E91A5E /* ViewController.swift in Sources */,
+				7125384820ADCBF600A54554 /* FriendReadViewController.swift in Sources */,
+				7125384C20ADCC0800A54554 /* ReadLaterViewController.swift in Sources */,
+				7125384620ADC6CC00A54554 /* BackTableViewController.swift in Sources */,
+				7125384A20ADCBFE00A54554 /* ArticleViewController.swift in Sources */,
 				7177FBD020AD833000E91A5E /* AppDelegate.swift in Sources */,
+				7125384E20ADD01000A54554 /* BaseViewController.swift in Sources */,
 				7177FBE220AD843600E91A5E /* BaseNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

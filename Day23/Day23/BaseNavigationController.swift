@@ -37,12 +37,12 @@ class BaseNavigationController: UINavigationController {
                 self.currentViewController = vc
                 self.currentViewController.view.frame = CGRect(x: UIScreen.main.bounds.width - 150, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
                 
-                UIView.animate(withDuration: 0.7, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     self.currentViewController.view.frame = self.view.bounds
                 })
                 
                 self.currentViewController.didTouch = {
-                    UIView.animate(withDuration: 0.7, animations: {
+                    UIView.animate(withDuration: 0.3, animations: {
                         self.currentViewController.view.frame = CGRect(x: UIScreen.main.bounds.width - 150, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
                     })
                 }
@@ -62,7 +62,7 @@ class BaseNavigationController: UINavigationController {
         self.currentViewController.view.frame = self.view.bounds
         
         self.currentViewController.didTouch = {
-            UIView.animate(withDuration: 0.7, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.currentViewController.view.frame = CGRect(x: UIScreen.main.bounds.width - 150, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
             })
         }
